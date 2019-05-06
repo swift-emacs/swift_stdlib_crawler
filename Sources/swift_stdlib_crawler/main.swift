@@ -102,6 +102,7 @@ struct DocumentationData {
         var name: String?
         var kind: String?
         var usr: String?
+        var domain: String?
     }
 }
 
@@ -187,6 +188,10 @@ func process(url: URL,
     if symbol.role == "collectionGroup" ||
          classLikeKinds.contains(symbol.kind ?? "") {
         urls.append(nextURL)
+    }
+
+    if (symbol.domain ?? "") == "entitlements" {
+        return
     }
 
     for key in allSymbols.keys {
@@ -286,7 +291,7 @@ print(";; Copyright (C) 2018 taku0")
 print("")
 print(";; Authors: taku0 (http://github.com/taku0)")
 print(";;")
-print(";; Version: 5.0.0")
+print(";; Version: 7.1.0")
 print(";; Package-Requires: ((emacs \"24.4\") (seq \"2.3\"))")
 print(";; Keywords: languages swift")
 print("")
@@ -322,7 +327,7 @@ let documentPrefixes = [
   "https://developer.apple.com/documentation/foundation/": "Foundation",
 ]
 
-for (key, symbols) in allSymbols {
+for (key, symbols) in allSymbols.sorted(by: { (l1, l2) in l1.0 < l2.0 }) {
     guard
       let constNamePrefix = constNamePrefixes[key],
       let documentPrefix = documentPrefixes[key]
