@@ -194,6 +194,10 @@ func process(url: URL,
         return
     }
 
+    if symbol.role == "pseudoSymbol" {
+        return
+    }
+
     for key in allSymbols.keys {
         if !(url.absoluteString.starts(with: key)) {
             continue
