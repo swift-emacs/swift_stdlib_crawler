@@ -1,5 +1,5 @@
 // swift_stdlib_crawler --- crawler for Swift stdlib and Foundation.
-// Copyright (C) 2018  taku0 https://github.com/taku0
+// Copyright (C) 2018-2020  taku0 https://github.com/taku0
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -291,11 +291,11 @@ let allSymbols = process(rootURLs: rootURLs)
 
 print(";;; swift-mode-standard-types.el --- Major-mode for Apple's Swift programming language, Standard Types. -*- lexical-binding: t -*-")
 print("")
-print(";; Copyright (C) 2018 taku0")
+print(";; Copyright (C) 2018-2020 taku0")
 print("")
 print(";; Authors: taku0 (http://github.com/taku0)")
 print(";;")
-print(";; Version: 7.1.0")
+print(";; Version: 8.0.2")
 print(";; Package-Requires: ((emacs \"24.4\") (seq \"2.3\"))")
 print(";; Keywords: languages swift")
 print("")

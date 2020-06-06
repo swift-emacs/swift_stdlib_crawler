@@ -1,5 +1,5 @@
 // swift_stdlib_crawler --- crawler for Swift stdlib and Foundation.
-// Copyright (C) 2018  taku0 https://github.com/taku0
+// Copyright (C) 2018-2020  taku0 https://github.com/taku0
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -15,6 +15,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import Foundation
+import FoundationNetworking
 
 import SwiftSoup
 
